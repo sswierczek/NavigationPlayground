@@ -6,10 +6,10 @@ import android.support.v4.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.NavController
-import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.findNavController
 import com.androidmess.navigationplayground.R
 import kotlinx.android.synthetic.main.main_fragment.goToDetailsButton
+import java.util.UUID
 
 class MainFragment : Fragment() {
 
@@ -18,7 +18,6 @@ class MainFragment : Fragment() {
     }
 
     private lateinit var viewModel: MainViewModel
-    private lateinit var navController: NavController
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -30,8 +29,11 @@ class MainFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
-        navController = NavHostFragment.findNavController(this)
 
-        goToDetailsButton.setOnClickListener { navController.navigate(R.id.action_mainFragment_to_detailsFragment) }
+        goToDetailsButton.setOnClickListener { view ->
+            val bundle = Bundle()
+            bundle.putString("itemId", "${UUID.randomUUID()}")
+            view.findNavController().navigate(R.id.action_mainFragment_to_detailsFragment, bundle)
+        }
     }
 }

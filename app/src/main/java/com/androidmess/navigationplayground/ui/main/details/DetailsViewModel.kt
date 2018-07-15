@@ -1,4 +1,4 @@
-package com.androidmess.navigationplayground.ui.main
+package com.androidmess.navigationplayground.ui.main.details
 
 import android.arch.lifecycle.ViewModel;
 
