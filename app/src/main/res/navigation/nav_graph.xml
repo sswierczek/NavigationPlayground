@@ -21,6 +21,7 @@
         tools:layout="@layout/details_fragment">
         <argument
             android:name="itemId"
+            android:defaultValue="invalid ID"
             app:type="string" />
     </fragment>
     <fragment

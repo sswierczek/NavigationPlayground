@@ -31,9 +31,22 @@ class MainFragment : Fragment() {
         viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
 
         goToDetailsButton.setOnClickListener { view ->
-            val bundle = Bundle()
-            bundle.putString("itemId", "${UUID.randomUUID()}")
-            view.findNavController().navigate(R.id.action_mainFragment_to_detailsFragment, bundle)
+            navigateWithSafeArgument(view)
         }
     }
+
+    private fun navigateWithSafeArgument(view: View) {
+        val action = MainFragmentDirections.actionMainFragmentToDetailsFragment()
+        action.setItemId(randomID())
+        view.findNavController().navigate(action)
+    }
+
+    private fun navigateWithStandardArgument(view: View) = {
+        val bundle = Bundle().apply {
+            putString("itemId", randomID())
+        }
+        view.findNavController().navigate(R.id.action_mainFragment_to_detailsFragment, bundle)
+    }
+
+    private fun randomID() = "${UUID.randomUUID()}"
 }
