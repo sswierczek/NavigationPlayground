@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.findNavController
 import com.androidmess.navigationplayground.R
-import kotlinx.android.synthetic.main.main_fragment.goToDetailsButton
+import kotlinx.android.synthetic.main.main_fragment.goToDetails
 import java.util.UUID
 
 class MainFragment : Fragment() {
@@ -29,8 +29,7 @@ class MainFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
-
-        goToDetailsButton.setOnClickListener { view ->
+        goToDetails.setOnClickListener { view ->
             navigateWithSafeArgument(view)
         }
     }

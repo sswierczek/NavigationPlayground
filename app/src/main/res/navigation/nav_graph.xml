@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/loginFragment">
-
+    app:startDestination="@id/mainFragment">
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.androidmess.navigationplayground.ui.main.MainFragment"
@@ -25,12 +24,13 @@
             app:type="string" />
     </fragment>
     <fragment
-        android:id="@+id/loginFragment"
-        android:name="com.androidmess.navigationplayground.ui.main.login.LoginFragment"
-        android:label="login_fragment"
-        tools:layout="@layout/login_fragment">
-        <action
-            android:id="@+id/action_loginFragment_to_mainFragment"
-            app:destination="@id/mainFragment" />
-    </fragment>
+        android:id="@+id/favFragment"
+        android:name="com.androidmess.navigationplayground.ui.main.fav.FavFragment"
+        android:label="fav_fragment"
+        tools:layout="@layout/fav_fragment" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.androidmess.navigationplayground.ui.main.profile.ProfileFragment"
+        android:label="profile_fragment"
+        tools:layout="@layout/profile_fragment" />
 </navigation>

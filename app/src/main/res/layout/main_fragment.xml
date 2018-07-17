@@ -7,11 +7,12 @@
     android:layout_height="match_parent"
     tools:context=".ui.main.MainFragment">
 
-    <Button
-        android:id="@+id/goToDetailsButton"
+    <android.support.design.chip.Chip
+        android:id="@+id/goToDetails"
+        style="@style/Widget.MaterialComponents.Chip.Action"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Go to details"
+        app:chipText="Go to details"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
