@@ -20,7 +20,7 @@
     <fragment
         android:id="@+id/detailsFragment"
         android:name="com.androidmess.navigationplayground.ui.main.details.DetailsFragment"
-        android:label="details_fragment"
+        android:label="@string/menu_details_text"
         tools:layout="@layout/details_fragment">
         <argument
             android:name="itemId"
@@ -36,5 +36,31 @@
         android:id="@+id/profileFragment"
         android:name="com.androidmess.navigationplayground.ui.main.profile.ProfileFragment"
         android:label="@string/menu_profile_text"
-        tools:layout="@layout/profile_fragment" />
+        tools:layout="@layout/profile_fragment">
+        <action
+            android:id="@+id/action_profileFragment_to_signup"
+            app:destination="@id/nav_graph_signup"
+            app:enterAnim="@anim/nav_default_enter_anim"
+            app:exitAnim="@anim/nav_default_exit_anim"
+            app:popEnterAnim="@anim/nav_default_pop_enter_anim"
+            app:popExitAnim="@anim/nav_default_pop_exit_anim" />
+    </fragment>
+    <navigation
+        android:id="@+id/nav_graph_signup"
+        app:startDestination="@id/signUpFragment">
+        <fragment
+            android:id="@+id/signUpSuccess"
+            android:name="com.androidmess.navigationplayground.ui.main.signup.SignUpSuccess"
+            android:label="Success!"
+            tools:layout="@layout/sign_up_success_fragment" />
+        <fragment
+            android:id="@+id/signUpFragment"
+            android:name="com.androidmess.navigationplayground.ui.main.signup.SignUpFragment"
+            android:label="Sign up"
+            tools:layout="@layout/sign_up_fragment">
+            <action
+                android:id="@+id/action_signUpFragment_to_signUpSuccess"
+                app:destination="@id/signUpSuccess" />
+        </fragment>
+    </navigation>
 </navigation>
