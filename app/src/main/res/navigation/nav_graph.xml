@@ -31,7 +31,9 @@
         android:id="@+id/favFragment"
         android:name="com.androidmess.navigationplayground.ui.main.fav.FavFragment"
         android:label="@string/menu_fav_text"
-        tools:layout="@layout/fav_fragment" />
+        tools:layout="@layout/fav_fragment">
+        <deepLink app:uri="http://www.example.com/fav/{id}" />
+    </fragment>
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.androidmess.navigationplayground.ui.main.profile.ProfileFragment"
