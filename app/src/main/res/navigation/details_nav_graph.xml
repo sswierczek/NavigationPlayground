@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/details_nav_graph"
+    app:startDestination="@id/detailsFragment2">
+
+    <fragment
+        android:id="@+id/detailsFragment2"
+        android:name="com.androidmess.navigationplayground.details.DetailsFragment"
+        android:label="details_fragment"
+        tools:layout="@layout/details_fragment">
+        <argument
+            android:name="itemId"
+            android:defaultValue="invalid ID"
+            app:type="string" />
+    </fragment>
+</navigation>
