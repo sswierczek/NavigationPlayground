@@ -28,7 +28,7 @@
         <argument
             android:name="itemId"
             android:defaultValue="invalid ID"
-            app:type="string" />
+            app:argType="string" />
     </fragment>
     <fragment
         android:id="@+id/favFragment"
@@ -75,6 +75,6 @@
         <argument
             android:name="itemId"
             android:defaultValue="invalid ID"
-            app:type="string" />
+            app:argType="string" />
     </activity>
 </navigation>

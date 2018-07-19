@@ -13,6 +13,6 @@
         <argument
             android:name="itemId"
             android:defaultValue="invalid ID"
-            app:type="string" />
+            app:argType="string" />
     </fragment>
 </navigation>
