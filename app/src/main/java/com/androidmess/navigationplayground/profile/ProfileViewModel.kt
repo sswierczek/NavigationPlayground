@@ -1,4 +1,4 @@
-package com.androidmess.navigationplayground.ui.main.profile
+package com.androidmess.navigationplayground.profile
 
 import android.arch.lifecycle.ViewModel
 

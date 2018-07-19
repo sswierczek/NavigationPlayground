@@ -6,7 +6,7 @@
     app:startDestination="@id/mainFragment">
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.androidmess.navigationplayground.ui.main.MainFragment"
+        android:name="com.androidmess.navigationplayground.main.MainFragment"
         android:label="@string/menu_home_text"
         tools:layout="@layout/main_fragment">
         <action
@@ -19,7 +19,7 @@
     </fragment>
     <fragment
         android:id="@+id/detailsFragment"
-        android:name="com.androidmess.navigationplayground.ui.main.details.DetailsFragment"
+        android:name="com.androidmess.navigationplayground.details.DetailsFragment"
         android:label="@string/menu_details_text"
         tools:layout="@layout/details_fragment">
         <argument
@@ -29,14 +29,14 @@
     </fragment>
     <fragment
         android:id="@+id/favFragment"
-        android:name="com.androidmess.navigationplayground.ui.main.fav.FavFragment"
+        android:name="com.androidmess.navigationplayground.fav.FavFragment"
         android:label="@string/menu_fav_text"
         tools:layout="@layout/fav_fragment">
         <deepLink app:uri="http://www.example.com/fav/{id}" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.androidmess.navigationplayground.ui.main.profile.ProfileFragment"
+        android:name="com.androidmess.navigationplayground.profile.ProfileFragment"
         android:label="@string/menu_profile_text"
         tools:layout="@layout/profile_fragment">
         <action
@@ -52,12 +52,12 @@
         app:startDestination="@id/signUpFragment">
         <fragment
             android:id="@+id/signUpSuccess"
-            android:name="com.androidmess.navigationplayground.ui.main.signup.SignUpSuccess"
+            android:name="com.androidmess.navigationplayground.signup.SignUpSuccess"
             android:label="Success!"
             tools:layout="@layout/sign_up_success_fragment" />
         <fragment
             android:id="@+id/signUpFragment"
-            android:name="com.androidmess.navigationplayground.ui.main.signup.SignUpFragment"
+            android:name="com.androidmess.navigationplayground.signup.SignUpFragment"
             android:label="Sign up"
             tools:layout="@layout/sign_up_fragment">
             <action

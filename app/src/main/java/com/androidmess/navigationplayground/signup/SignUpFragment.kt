@@ -1,4 +1,4 @@
-package com.androidmess.navigationplayground.ui.main.signup
+package com.androidmess.navigationplayground.signup
 
 import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle

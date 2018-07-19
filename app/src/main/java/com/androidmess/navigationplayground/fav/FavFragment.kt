@@ -1,4 +1,4 @@
-package com.androidmess.navigationplayground.ui.main.fav
+package com.androidmess.navigationplayground.fav
 
 import android.arch.lifecycle.ViewModelProviders
 import android.os.Bundle
